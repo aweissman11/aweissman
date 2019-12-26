@@ -5,7 +5,8 @@ import { Colors } from '../../Utils/Colors';
 export const NavWrapper = styled.header`
   height: 80px;
   position: fixed;
-  top: 0;
+  transition: .5s;
+  top: ${({ showHeader }) => showHeader ? '0' : '-120px'};
   left: 0;
   width: 100%;
   background: #fff;

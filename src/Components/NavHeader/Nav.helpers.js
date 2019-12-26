@@ -1,4 +1,3 @@
-let scrollPos = 0;
 
 export const scrollToSection = (sectionId) => {
   return (() => {
@@ -10,12 +9,4 @@ export const scrollToSection = (sectionId) => {
       behavior: 'smooth'
     });
   })
-}
-
-export const handleScrollHeader = (e) => {
-  if ((document.body.getBoundingClientRect()).top > scrollPos) {
-  } else {
-  }
-  // saves the new position for iteration.
-  scrollPos = (document.body.getBoundingClientRect()).top;
 }
