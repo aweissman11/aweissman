@@ -38,7 +38,7 @@ const Highlights = () => {
             target='_blank'
             rel="noopener noreferrer"
             href='https://github.com/aweissman11/frontend-movie-tracker'
-          >GitHub</LinkText>
+          >See the code</LinkText>
         </HoverBox>
       </Project>
       <Project id='highlight-2' isVisible={vis2}>
@@ -47,16 +47,17 @@ const Highlights = () => {
           <Title whiteText >Wedding Site</Title>
           <LinkText
             whiteText
+            topLink
             target='_blank'
             rel="noopener noreferrer"
-            href='https://github.com/aweissman11/ba_front'
-          >GitHub</LinkText>
+            href='http://chelseyandaaronsbigadventure.com/'
+          >Visit site</LinkText>
           <LinkText
             whiteText
             target='_blank'
             rel="noopener noreferrer"
-            href='http://chelseyandaaronsbigadventure.com/'
-          >Deployed</LinkText>
+            href='https://github.com/aweissman11/ba_front'
+          >See the code</LinkText>
         </HoverBox>
       </Project>
       <Project id='highlight-3' isVisible={vis3}>
@@ -68,7 +69,7 @@ const Highlights = () => {
             target='_blank'
             rel="noopener noreferrer"
             href='https://github.com/aweissman11/goin-campin'
-          >GitHub</LinkText>
+          >See the code</LinkText>
         </HoverBox>
       </Project>
       <Project id='highlight-4' isVisible={vis4}>
@@ -77,16 +78,17 @@ const Highlights = () => {
           <Title whiteText >Pallete Picker</Title>
           <LinkText
             whiteText
+            topLink
             target='_blank'
             rel="noopener noreferrer"
-            href='https://github.com/aweissman11/palette-picker'
-          >GitHub</LinkText>
+            href='http://palettepals.herokuapp.com/#'
+          >Visit site</LinkText>
           <LinkText
             whiteText
             target='_blank'
             rel="noopener noreferrer"
-            href='http://palettepals.herokuapp.com/#'
-          >Deployed</LinkText>
+            href='https://github.com/aweissman11/palette-picker'
+          >See the code</LinkText>
         </HoverBox>
       </Project>
     </HighWrapper>

@@ -57,6 +57,7 @@ export const LinkText = styled.a`
   color: ${({ whiteText }) => whiteText ? Colors.White : Colors.Gray};
   font-weight: bold;
   text-decoration: none;
+  margin: ${({ topLink }) => topLink && '25px auto 15px'};
 
   &:visited {
     color: ${({ whiteText }) => whiteText ? Colors.White : Colors.Black};

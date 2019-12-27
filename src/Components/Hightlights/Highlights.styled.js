@@ -6,7 +6,7 @@ import { AnimateInDiv } from '../../Shared/Shared.styled';
 export const HighWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 300px 300px 300px 300px;
+  grid-template-rows: 325px 325px 325px 325px;
   gap: 20px;
   margin-bottom: 40px;
 
