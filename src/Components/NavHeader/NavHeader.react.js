@@ -31,9 +31,9 @@ const NavHeader = () => {
   }
 
   return (
-    <NavWrapper showHeader={showHeader}>
+    <NavWrapper showHeader={showHeader} id='nav-header'>
       <NavList>
-        <NavItem home>Aaron</NavItem>
+        <NavItem home onClick={scrollToSection('nav-header')}>Aaron</NavItem>
         <NavItem keepRight onClick={scrollToSection('highlights-section')}>Work.</NavItem>
         <NavItem fullRight onClick={scrollToSection('about-section')}>About.</NavItem>
       </NavList>
