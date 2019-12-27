@@ -32,7 +32,7 @@ const Abstract = () => {
   return (
     <AbWrapper>
       <BigText isVisible={vis1} >Full stack software engineer</BigText>
-      <BigText isVisible={vis2} >crafting buser friendly</BigText>
+      <BigText isVisible={vis2} >crafting user friendly</BigText>
       <BigText isVisible={vis3} >applications and experiences.</BigText>
       <BigText isVisible={vis4} >
         <span onClick={scrollToSection('highlights-section')} >
