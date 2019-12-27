@@ -36,6 +36,7 @@ const Highlights = () => {
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='https://github.com/aweissman11/frontend-movie-tracker'
           >GitHub</LinkText>
         </HoverBox>
@@ -47,11 +48,13 @@ const Highlights = () => {
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='https://github.com/aweissman11/ba_front'
           >GitHub</LinkText>
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='http://chelseyandaaronsbigadventure.com/'
           >Deployed</LinkText>
         </HoverBox>
@@ -63,6 +66,7 @@ const Highlights = () => {
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='https://github.com/aweissman11/goin-campin'
           >GitHub</LinkText>
         </HoverBox>
@@ -74,11 +78,13 @@ const Highlights = () => {
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='https://github.com/aweissman11/palette-picker'
           >GitHub</LinkText>
           <LinkText
             whiteText
             target='_blank'
+            rel="noopener noreferrer"
             href='http://palettepals.herokuapp.com/#'
           >Deployed</LinkText>
         </HoverBox>

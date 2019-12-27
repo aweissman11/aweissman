@@ -1,4 +1,3 @@
-
 export const scrollToSection = (sectionId) => {
   return (() => {
     let endpoint = document.querySelector('#' + sectionId);

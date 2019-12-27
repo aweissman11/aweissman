@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { NavItem, NavWrapper, NavList } from './NavHeader.styled';
-import { scrollToSection, handleScrollHeader } from './Nav.helpers';
+import { scrollToSection } from './Nav.helpers';
 
 
 const NavHeader = () => {

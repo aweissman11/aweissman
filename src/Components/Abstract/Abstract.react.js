@@ -52,7 +52,7 @@ const Abstract = () => {
         <InfoNugget>
           <AbInfo id='ab-info-7' isVisible={vis7} >Repos</AbInfo>
           <AbInfo isVisible={vis7} info>
-            <a href='https://github.com/aweissman11?tab=repositories' target='_blank'>GitHub</a>
+            <a href='https://github.com/aweissman11?tab=repositories' target='_blank' rel="noopener noreferrer">GitHub</a>
           </AbInfo>
         </InfoNugget>
       </AbInfoWrapper>

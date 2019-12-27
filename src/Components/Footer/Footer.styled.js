@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Colors } from '../../Utils/Colors';
 
 export const FootWrapper = styled.div`
   display: flex;
