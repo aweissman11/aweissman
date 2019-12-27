@@ -1,51 +1,37 @@
 import styled from 'styled-components';
 import { Device } from '../../Utils/Device';
 import { Colors } from '../../Utils/Colors';
+import { AnimateInP } from '../../Shared/Shared.styled';
 
-export const AbWrapper = styled.div`
-  width: 100%;
+export const AbInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 
-  @media ${Device.Laptop} {
-  }
-
-  @media ${Device.LaptopL} {
-  }
-
-  @media ${Device.Desktop} {
+  @media ${Device.Tablet} {
+    flex-direction: row;
   }
 `;
-AbWrapper.displayName = 'AbWrapper';
+AbInfoWrapper.displayName = 'AbInfoWrapper';
 
-export const AbText = styled.p`
-  font-size: 35px;
-  line-height: 55px;
-  margin: 0 auto;
-  color: ${Colors.Black};
+export const InfoNugget = styled.div`
+  display: flex;
+  flex-direction: column;
 
-
-  svg {
-    margin: 50px auto 80px;
-    cursor: pointer;
-  }
-
-
-  @media ${Device.Laptop} {
-  }
-
-  @media ${Device.LaptopL} {
-  }
-
-  @media ${Device.Desktop} {
+  @media ${Device.Tablet} {
+    flex-direction: row;
+    width: max-content;
+    margin-right: 40px;
   }
 `;
-AbText.displayName = 'AbText';
+InfoNugget.displayName = 'InfoNugget';
 
-export const AbInfo = styled.p`
+export const AbInfo = styled(AnimateInP)`
   font-size: 16px;
   color: ${Colors.Black};
   color: ${({ info }) => info ? Colors.Black : Colors.Gray};
-  margin: ${({ info }) => info ? '0 auto 40px' : '0 auto'};
   font-weight: ${({ info }) => info ? 'bold' : 'normal'};
+  margin: ${({ info }) => info ? '0 0 30px' : '0'};
+  white-space: nowrap;
 
   svg {
     margin-top: 50px;
@@ -53,18 +39,8 @@ export const AbInfo = styled.p`
   }
 
 
-  @media ${Device.Laptop} {
-  }
-
-  @media ${Device.LaptopL} {
-  }
-
-  @media ${Device.Desktop} {
+  @media ${Device.Tablet} {
+    margin: ${({ info }) => info ? '0 auto 0px 10px' : '0 auto'};
   }
 `;
 AbInfo.displayName = 'AbInfo';
-
-export const GraySpan = styled.span`
-  color: ${Colors.Gray};
-`;
-GraySpan.displayName = 'GraySpan';

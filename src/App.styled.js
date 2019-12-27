@@ -25,18 +25,10 @@ export const AppWrapper = styled.div`
 AppWrapper.displayName = 'AppWrapper';
 
 export const MainApp = styled.div`
-  margin-top: 80px;
+  margin-top: 140px;
 
   @media ${Device.Tablet} {
-  }
-
-  @media ${Device.Laptop} {
-  }
-
-  @media ${Device.LaptopL} {
-  }
-
-  @media ${Device.Desktop} {
+    margin-top: 240px;
   }
 `;
 MainApp.displayName = 'MainApp';
@@ -46,14 +38,5 @@ export const Break = styled.div`
   height: 2px;
   margin: 40px auto;
   opacity: 0.1;
-
-  @media ${Device.Laptop} {
-  }
-
-  @media ${Device.LaptopL} {
-  }
-
-  @media ${Device.Desktop} {
-  }
 `;
 Break.displayName = 'Break';

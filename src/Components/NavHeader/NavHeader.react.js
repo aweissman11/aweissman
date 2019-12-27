@@ -6,16 +6,21 @@ import { scrollToSection, handleScrollHeader } from './Nav.helpers';
 
 const NavHeader = () => {
   useEffect(() => {
-    window.addEventListener('scroll', handleScrollHeader);
+    window.setTimeout(() => {
+      toggleHeader(true)
+      window.addEventListener('scroll', handleScrollHeader);
+    }, 1000);
   }, [])
 
   let scrollPos = 0;
-  let [showHeader, toggleHeader] = useState(true);
+  let [showHeader, toggleHeader] = useState(false);
 
   const handleScrollHeader = () => {
     let fromTop = (document.body.getBoundingClientRect()).top;
     if (fromTop > scrollPos) {
-      toggleHeader(true);
+      if (!showHeader) {
+        toggleHeader(true);
+      }
     } else {
       if (scrollPos < 0) {
         toggleHeader(false);
