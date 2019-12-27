@@ -8,18 +8,6 @@ export const FootWrapper = styled.div`
 `;
 FootWrapper.displayName = 'FootWrapper';
 
-export const FootLink = styled.a`
-  color: ${Colors.Gray};
-  font-weight: bold;
-  text-decoration: none;
-
-  &:visited {
-    color: ${Colors.Black};
-    font-weight: lighter;
-  }
-`;
-FootLink.displayName = 'FootLink';
-
 export const SiteInfo = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
