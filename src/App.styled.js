@@ -25,7 +25,7 @@ export const AppWrapper = styled.div`
 AppWrapper.displayName = 'AppWrapper';
 
 export const MainApp = styled.div`
-  margin-top: 80px;
+  margin-top: 120px;
 
   @media ${Device.Tablet} {
   }

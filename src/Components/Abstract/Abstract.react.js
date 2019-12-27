@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbWrapper, AbText, AbInfo } from './Abstract.styled';
+import { AbWrapper, AbText, AbInfo, AbInfoWrapper, InfoNugget } from './Abstract.styled';
 import { DownArrow } from '../Icons/DownArrow.react';
 import { scrollToSection } from '../NavHeader/Nav.helpers';
 
@@ -15,14 +15,22 @@ const Abstract = () => {
         </span>
       </AbText>
 
-      <AbInfo>Location</AbInfo>
-      <AbInfo info>Denver, CO</AbInfo>
-      <AbInfo>Contact</AbInfo>
-      <AbInfo info>weissman.aaron@gmail.com</AbInfo>
-      <AbInfo>Repos</AbInfo>
-      <AbInfo info>
-        <a href='https://github.com/aweissman11?tab=repositories' target='_blank'>GitHub</a>
-      </AbInfo>
+      <AbInfoWrapper>
+        <InfoNugget>
+          <AbInfo>Location</AbInfo>
+          <AbInfo info>Denver, CO</AbInfo>
+        </InfoNugget>
+        <InfoNugget>
+          <AbInfo>Contact</AbInfo>
+          <AbInfo info>weissman.aaron@gmail.com</AbInfo>
+        </InfoNugget>
+        <InfoNugget>
+          <AbInfo>Repos</AbInfo>
+          <AbInfo info>
+            <a href='https://github.com/aweissman11?tab=repositories' target='_blank'>GitHub</a>
+          </AbInfo>
+        </InfoNugget>
+      </AbInfoWrapper>
     </AbWrapper>
   );
 }
