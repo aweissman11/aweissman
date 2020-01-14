@@ -48,9 +48,8 @@ const AboutMe = () => {
     <SimpleDiv>
       <About id='about-1' isVisible={vis1}>I'm Aaron, a React specialist with a background in sales and consulting.</About>
       <About id='about-2' isVisible={vis2}>I bring a unique blend of technical skill used building and developing </About>
-      <About id='about-3' isVisible={vis3}>full stack, easy to use applications, </About>
-      <About id='about-4' isVisible={vis4}>as well as strong communication skills </About>
-      <About id='about-5' isVisible={vis5}>learned through the establishment and maintenance of long lasting client relationships.</About>
+      <About id='about-3' isVisible={vis3}>full stack, easy to use applications, as well as strong communication skills</About>
+      <About id='about-4' isVisible={vis4}>learned through the establishment and maintenance of long lasting client relationships.</About>
 
       <Background>
         <Experience>
