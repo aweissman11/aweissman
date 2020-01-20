@@ -20,7 +20,7 @@ export const HighWrapper = styled.div`
   }
 
   @media ${Device.Laptop} {
-    grid-template-rows: 450px 450px;
+    grid-template-rows: 370px 370px;
   }
 
   @media ${Device.LaptopL} {
@@ -66,7 +66,6 @@ export const Project = styled(AnimateInDiv)`
       transform: scale(1.2);
     }
   }
-
 `;
 Project.displayName = 'Project';
 
@@ -83,6 +82,27 @@ export const Highlight = styled.div`
   };
   margin: 0;
   background-size: 100% 100%;
+  margin: auto;
+  max-width: 380px;
+
+  @media ${Device.Mobile} {
+    max-width: 500px;
+  }
+
+  @media ${Device.Tablet} {
+    max-width: 350px;
+  }
+
+  @media ${Device.Laptop} {
+    max-width: 450px;
+  }
+
+  @media ${Device.LaptopL} {
+    max-width: 580px;
+  }
+
+  @media ${Device.Desktop} {
+  }
 `;
 Highlight.displayName = 'Highlight';
 
@@ -102,6 +122,24 @@ export const HoverBox = styled.div`
   text-align: center;
   transition: opacity .2s, visibility .2s;
   background: #2929299e;
+  margin: auto;
+  max-width: 456px;
+
+  @media ${Device.Mobile} {
+    max-width: 600px;
+  }
+
+  @media ${Device.Tablet} {
+    max-width: 420px;
+  }
+
+  @media ${Device.Laptop} {
+    max-width: 540px;
+  }
+
+  @media ${Device.LaptopL} {
+    max-width: 696px;
+  }
 `;
 HoverBox.displayName = 'HoverBox';
 
