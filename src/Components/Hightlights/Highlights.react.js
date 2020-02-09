@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { HighWrapper, Highlight, Project, HoverBox, GraySpan } from './Highlights.styled';
 import { AbWrapper, BigText, Title, LinkText } from '../../Shared/Shared.styled';
 import { setVisOnScroll } from '../../Shared/Shared.helpers';
+import { ThemeContext } from '../../Contexts/ThemeContext.react';
 
 const Highlights = () => {
+  const { theme } = useContext(ThemeContext);
+
   let [vis1, setVis1] = useState(false);
   let [vis2, setVis2] = useState(false);
   let [vis3, setVis3] = useState(false);
@@ -94,9 +97,9 @@ const Highlights = () => {
     </HighWrapper>
 
     <AbWrapper>
-      <BigText id='highlight-5' isVisible={vis5}>Always looking for</BigText>
-      <BigText id='highlight-6' isVisible={vis6}>new things to build</BigText>
-      <BigText id='highlight-7' isVisible={vis7}>and <GraySpan>CREATE</GraySpan></BigText>
+      <BigText theme={theme} id='highlight-5' isVisible={vis5}>Always looking for</BigText>
+      <BigText theme={theme} id='highlight-6' isVisible={vis6}>new things to build</BigText>
+      <BigText theme={theme} id='highlight-7' isVisible={vis7}>and <GraySpan>CREATE</GraySpan></BigText>
     </AbWrapper>
   </>);
 }

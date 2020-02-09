@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { AbInfo, AbInfoWrapper, InfoNugget } from './Abstract.styled';
 import { DownArrow } from '../Icons/DownArrow.react';
 import { scrollToSection } from '../NavHeader/Nav.helpers';
 import { setVisOnScroll } from '../../Shared/Shared.helpers';
 import { BigText, AbWrapper } from '../../Shared/Shared.styled';
+import { ThemeContext } from '../../Contexts/ThemeContext.react';
 
 const Abstract = () => {
+  const { theme } = useContext(ThemeContext);
+
   let [vis1, setVis1] = useState(false);
   let [vis2, setVis2] = useState(false);
   let [vis3, setVis3] = useState(false);
@@ -31,10 +34,10 @@ const Abstract = () => {
 
   return (
     <AbWrapper>
-      <BigText isVisible={vis1} >Full stack software engineer</BigText>
-      <BigText isVisible={vis2} >Loves dogs, hiking</BigText>
-      <BigText isVisible={vis3} >and building websites.</BigText>
-      <BigText isVisible={vis4} >
+      <BigText theme={theme} isVisible={vis1} >Full stack software engineer</BigText>
+      <BigText theme={theme} isVisible={vis2} >Loves dogs, hiking</BigText>
+      <BigText theme={theme} isVisible={vis3} >and building websites.</BigText>
+      <BigText theme={theme} isVisible={vis4} >
         <span onClick={scrollToSection('highlights-section')} >
           <DownArrow />
         </span>
@@ -42,16 +45,16 @@ const Abstract = () => {
 
       <AbInfoWrapper>
         <InfoNugget>
-          <AbInfo id='ab-info-5' isVisible={vis5} >Location</AbInfo>
-          <AbInfo isVisible={vis5} info>Denver, CO</AbInfo>
+          <AbInfo theme={theme} id='ab-info-5' isVisible={vis5} >Location</AbInfo>
+          <AbInfo theme={theme} isVisible={vis5} info>Denver, CO</AbInfo>
         </InfoNugget>
         <InfoNugget>
-          <AbInfo id='ab-info-6' isVisible={vis6} >Contact</AbInfo>
-          <AbInfo isVisible={vis6} info>weissman.aaron@gmail.com</AbInfo>
+          <AbInfo theme={theme} id='ab-info-6' isVisible={vis6} >Contact</AbInfo>
+          <AbInfo theme={theme} isVisible={vis6} info>weissman.aaron@gmail.com</AbInfo>
         </InfoNugget>
         <InfoNugget>
-          <AbInfo id='ab-info-7' isVisible={vis7} >Repos</AbInfo>
-          <AbInfo isVisible={vis7} info>
+          <AbInfo theme={theme} id='ab-info-7' isVisible={vis7} >Repos</AbInfo>
+          <AbInfo theme={theme} isVisible={vis7} info>
             <a href='https://github.com/aweissman11?tab=repositories' target='_blank' rel="noopener noreferrer">GitHub</a>
           </AbInfo>
         </InfoNugget>

@@ -9,10 +9,10 @@ export const NavWrapper = styled.header`
   top: ${({ showHeader }) => showHeader ? '0' : '-120px'};
   left: 0;
   width: 100%;
-  background: #fff;
   padding: 0 15px;
   box-sizing: border-box;
   z-index: 1;
+  background-color: ${({ theme }) => Colors(theme).BackgroundColor};
 
   @media ${Device.Tablet} {
     padding: 0 60px;
@@ -43,7 +43,7 @@ export const NavItem = styled.div`
   font-size: 16px;
   margin-left: ${({ keepRight }) => keepRight && 'auto'};
   margin-left: ${({ fullRight }) => fullRight && '25px'};
-  color: ${({ home }) => home ? Colors.Black : Colors.Gray};
+  color: ${({ home, theme }) => home ? Colors(theme).PrimaryFont : Colors(theme).SecondaryFont};
   cursor: pointer;
 
   @media ${Device.Laptop} {

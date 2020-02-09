@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
   About,
   Background,
@@ -8,8 +8,11 @@ import {
 } from './AboutMe.styled';
 import { SimpleDiv, Title, AnimateInDiv } from '../../Shared/Shared.styled';
 import { setVisOnScroll } from '../../Shared/Shared.helpers';
+import { ThemeContext } from '../../Contexts/ThemeContext.react';
 
 const AboutMe = () => {
+  const { theme } = useContext(ThemeContext);
+
   let [vis1, setVis1] = useState(false);
   let [vis2, setVis2] = useState(false);
   let [vis3, setVis3] = useState(false);
@@ -46,10 +49,12 @@ const AboutMe = () => {
 
   return (
     <SimpleDiv>
-      <About id='about-1' isVisible={vis1}>I'm Aaron, a React specialist with a background in sales and consulting.</About>
-      <About id='about-2' isVisible={vis2}>I bring a unique blend of technical skill used building and developing </About>
-      <About id='about-3' isVisible={vis3}>full stack, easy to use applications, as well as strong communication skills</About>
-      <About id='about-4' isVisible={vis4}>learned through the establishment and maintenance of long lasting client relationships.</About>
+      <About theme={theme} id='about-1' isVisible={vis1}>I'm Aaron, a React specialist with a background in sales and consulting.</About>
+      <About theme={theme} id='about-2' isVisible={vis2}>I bring a unique blend of technical skill used building and developing </About>
+      <About theme={theme} id='about-3' isVisible={vis3}>full stack, easy to use applications, as well as strong communication skills</About>
+      <About theme={theme} id='about-4' isVisible={vis4}>learned through the establishment and maintenance of long lasting client relationships.</About>
+      <About theme={theme} id='about-5' isVisible={vis5}>The first step to being great at something is being really bad at it.</About>
+
 
       <Background>
         <Experience>
