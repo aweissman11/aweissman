@@ -9,6 +9,10 @@ export const AppWrapper = styled.div`
   color: ${({ theme }) => Colors(theme).PrimaryFont};
   transition: .8s;
 
+  a:visited {
+    color: ${({ theme }) => theme === 'dark' && '#b08bf1'};
+  }
+
   @media ${Device.Tablet} {
     padding: 0 60px;
   }
