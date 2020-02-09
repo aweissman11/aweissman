@@ -30,7 +30,7 @@ AnimateInDiv.displayName = 'AnimateInDiv';
 export const Title = styled.h3`
   font-size: 25px;
   font-weight: bold;
-  color: ${({ whiteText }) => whiteText ? Colors.White : Colors.Gray};
+  color: ${({ whiteText, theme }) => whiteText ? Colors(theme).AlternateFont : Colors(theme).SecondaryFont};
   margin: 0 auto 20px;
 `;
 Title.displayName = 'Title';
@@ -39,7 +39,7 @@ export const BigText = styled(AnimateInP)`
 font-size: 35px;
 line-height: 55px;
 margin: 0 auto;
-color: ${Colors.Black};
+color: ${({ theme }) => Colors(theme).PrimaryFont};
 
 svg {
   margin: 50px auto 80px;
@@ -54,13 +54,13 @@ svg {
 BigText.displayName = 'BigText';
 
 export const LinkText = styled.a`
-  color: ${({ whiteText }) => whiteText ? Colors.White : Colors.Gray};
+  color: ${({ whiteText, theme }) => whiteText ? Colors(theme).AlternateFont : Colors(theme).SecondaryFont};
   font-weight: bold;
   text-decoration: none;
   margin: ${({ topLink }) => topLink && '25px auto 15px'};
 
   &:visited {
-    color: ${({ whiteText }) => whiteText ? Colors.White : Colors.Black};
+    color: ${({ whiteText, theme }) => whiteText ? Colors(theme).AlternateFont : Colors(theme).PrimaryFont};
     font-weight: lighter;
   }
 `;

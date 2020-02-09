@@ -73,12 +73,12 @@ export const Highlight = styled.div`
   height: 100%;
   width: 100%;
   transition: .4s;
-  background: ${({ project }) => project ?
+  background: ${({ project, theme }) => project ?
     project === 'movieTracker' ? 'url(https://i.imgur.com/w5Cas8u.png)'
       : project === 'wedding' ? 'url(https://i.imgur.com/vPe61FS.png)'
         : project === 'goinCampin' ? 'url(https://i.imgur.com/A5xgvZL.png)'
           : project === 'pallete' && 'url(https://i.imgur.com/N0LNNgG.png)'
-    : Colors.Gray
+    : Colors(theme).SecondaryFont
   };
   margin: 0;
   background-size: 100% 100%;
@@ -144,6 +144,6 @@ export const HoverBox = styled.div`
 HoverBox.displayName = 'HoverBox';
 
 export const GraySpan = styled.span`
-  color: ${Colors.Gray};
+  color: ${({ theme }) => Colors(theme).SecondaryFont};
 `;
 GraySpan.displayName = 'GraySpan';

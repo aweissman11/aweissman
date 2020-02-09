@@ -4,7 +4,7 @@ import { AnimateInDiv } from '../../Shared/Shared.styled';
 
 export const About = styled(AnimateInDiv)`
   font-size: 20px;
-  color: ${Colors.Black};
+  color: ${({ theme }) => Colors(theme).PrimaryFont};
   line-height: 30px;
 `;
 About.displayName = 'About';

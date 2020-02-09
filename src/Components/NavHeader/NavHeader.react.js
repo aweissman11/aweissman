@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
-import { NavItem, NavWrapper, NavList } from './NavHeader.styled';
+import { NavItem, NavWrapper, NavList, SwitchToggle, TinyText } from './NavHeader.styled';
 import { scrollToSection } from './Nav.helpers';
+import { ThemeContext } from '../../Contexts/ThemeContext.react';
+import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch.react';
 
 
 const NavHeader = () => {
+  const { theme } = useContext(ThemeContext);
+
   useEffect(() => {
     window.setTimeout(() => {
       toggleHeader(true)
@@ -31,11 +35,12 @@ const NavHeader = () => {
   }
 
   return (
-    <NavWrapper showHeader={showHeader} id='nav-header'>
+    <NavWrapper showHeader={showHeader} id='nav-header' theme={theme}>
       <NavList>
-        <NavItem home onClick={scrollToSection('nav-header')}>Aaron</NavItem>
-        <NavItem keepRight onClick={scrollToSection('highlights-section')}>Work.</NavItem>
-        <NavItem fullRight onClick={scrollToSection('about-section')}>About.</NavItem>
+        <NavItem home onClick={scrollToSection('nav-header')} theme={theme}>Aaron</NavItem>
+        <NavItem keepRight onClick={scrollToSection('highlights-section')} theme={theme}>Work.</NavItem>
+        <NavItem fullRight onClick={scrollToSection('about-section')} theme={theme}>About.</NavItem>
+        <DarkModeSwitch />
       </NavList>
     </NavWrapper>
   );
